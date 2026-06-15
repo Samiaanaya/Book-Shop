@@ -56,12 +56,7 @@ const PlaceOrder = () => {
   };
 
   const handlePlaceOrder = async () => {
-    const res = await createOrder({ products: items });
-    if (res?.error) {
-      toast.error("Something went wrong");
-    } else {
-      dispatch(clearCart());
-    }
+    toast.success("Thanks For order!")
   };
 
   const toastId = "cart";
